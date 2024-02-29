@@ -42,3 +42,10 @@ likePost.forEach((item) => {
   });
 });
 
+menuItem.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    $.querySelector(".menu-item__open").classList.remove("menu-item__open");
+    item.classList.add("menu-item__open");
+  });
+});
