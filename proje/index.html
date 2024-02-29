@@ -12,7 +12,13 @@
 
     <title>proje-sherkati</title>
     <!-- js tailwnid -->
-
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 <body class="font-RobotoRegular bg-pink-25 dark:bg-zinc-500 overflow-x-hidden">
 
