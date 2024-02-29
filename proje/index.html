@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/app-icon.png">
+    <!-- link tailwind -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- link css aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>proje-sherkati</title>
+    <!-- js tailwnid -->
+
+</head>
+<body class="font-RobotoRegular bg-pink-25 dark:bg-zinc-500 overflow-x-hidden">
+
+    <!-- SVG ICON -->
+    <svg class="hidden">
+        <symbol id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </symbol>
+          <symbol id="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </symbol>
+    </svg>
+
+       <!-- header -->
+        <header id="scroll" class="min-h-[95vh] rounded-b-9xl" >
+            <!-- navbar -->
+            <div class="container">
+                <!-- nav -->
+                <nav class="flex items-center justify-between py-4" >
+
+                    <!-- logo & menu pc -->
+                <div class="flex items-center" data-aos="zoom-in">
+                       <!-- logo -->
+                       <a href="/proje/index.html">
+                        <img src="img/svgs/logo.svg" alt="proje-sherkati">
+                    </a>
+
+                    <!-- menu pc -->
+                    <ul class="hidden md:flex child:text-gray-350  child:md:mr-3 md:ml-2 ml-7 lg:ml-10 child:lg:mr-6 child-hover:text-white child:transition child:duration-150" data-aos="zoom-in">
+                        <li>
+                            <a href="#" class="menu-item menu-item__open">Home</a>
+                        </li>
+                        <li>    
+                            <a href="#" class="menu-item">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item">Near me</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item">Events</a>
+                        </li>       
+                        <li>
+                            <a href="#" class="menu-item">Blog</a>
+                        </li>
+                        <li> 
+                            <a href="#" class="menu-item">Gallery</a>
+                        </li>
+                        <li> 
+                            <a href="#" class="menu-item">About</a>
+                        </li>
+                        <li> 
+                            <a href="#" class="menu-item">Contact us</a>
+                        </li>
+
+                    </ul>
+             </div>
+
+                    <!-- menu Mobile -->
+                    <div class="z-20 nav-menu  w-64 bg-gray-200 dark:bg-zinc-700 transition-all duration-300 ease-in-out md:hidden" >
+                        <div class="relative block group cursor-pointer ml-56 mb-4 ">
+                            <div class=" pt-2"  id="toggle-theme">
+                                <svg class=" w-7 h-7 inline-block dark:hidden">
+                                    <use href="#moon"></use>
+                                </svg>
+                                <svg class="w-7 h-7 text-white/70 hidden dark:inline-block">
+                                    <use href="#sun"></use>
+                                </svg>
+                            </div>
+                            <a href="/proje/index.html">
+                                <h2 class="absolute right-28 top-2 text-3xl text-black dark:text-white/80 font-ArchivoBlack">sherkat</h2>
+                            </a>
+                        </div>
+                        <hr class="hr-menu mb-3">
+                        <ul class="inline-block child:text-black pl-6  child:dark:text-white/70 ch ild-hover:dark:text-orange-350 child:mb-3 child-hover:text-orange-350 child:duration-500 child:relative child:before:absolute child:before:left-0 child:before:top-0 child:before:bottom-0 child:before:m-auto child:before:w-0  child:before:h-1 child:before:bg-orange-350 child-hover:pl-5 child-hover:transition-all child-hover:duration-500 child-hover:before:transition-all child-hover:before:duration-500 child-hover:before:w-4 child:before:duration-500 child:before:rounded-full">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Destination</a>
+                            </li>
+                            <li>
+                                <a href="#">Near me</a>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                            </li>       
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li> 
+                                <a href="#">Gallery</a>
+                            </li>
+                            <li> 
+                                <a href="#">About</a>
+                            </li>
+                            <li> 
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+
+                        <!-- login mobile -->
+                        <div class="flex items-center justify-center child:mx-3 child:text-black p-6 child:dark:text-white/70 child:border child:border-orange-350 child:p-3 child:mt-4 child:font-RobotoMedium">
+                            <a class="block hover:bg-orange-350 transition-all rounded-tr-md rounded-bl-md" href="#">Sign up</a>
+                            <a class="block hover:bg-orange-350 transition-all rounded-tr-md rounded-bl-md" href="#">Sign in</a>
+                        </div>
+                    </div>
+
+                        
+                    <!-- login -->
+                    <div class="child:text-white child:font-RobotoMedium child:ml-4 hidden md:flex items-center" data-aos="zoom-in">
+                        <div class="group cursor-pointer ml-56 md:hidden lg:block mr-3 " id="toggle-theme-1">
+                                <svg class=" w-7 h-7 text-gray-350 inline-block dark:hidden">
+                                    <use href="#moon"></use>
+                                </svg>
+                                <svg class="w-7 h-7 text-gray-350 hidden dark:inline-block">
+                                    <use href="#sun"></use>
+                                </svg>
+                        </div>
+                        <a href="#" class="hover:text-gray-350 md:hidden lg:block">Sign up</a>
+                        <a href="#" class="border border-white rounded-full py-2.5 px-3 lg:px-6 xl:px-8 hover:bg-gray-200 hover:text-zinc-700 hover:dark:bg-zinc-700 hover:dark:text-gray-100 transition duration-200 md:hidden lg:block">Sign in</a>
+                        <a href="#" class="hidden md:block lg:hidden px-3 child:text-gray-350 child-hover:text-white child:transition-colors child:duration-200">
+                            <span>
+                                Login | Register
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- menu Mobile btn -->
+                    <div class="nav__btn bg-gray-200 dark:bg-zinc-700 w-[50px] h-[50px] rounded-xl flex items-center justify-center cursor-pointer md:hidden">
+                        <span class="btn__menu block relative w-7 h-[3px] bg-orange-350 rounded-3xl  transition duration-250 ease-in-out"></span>
+                    </div>
+                    
+                </nav>
+                  <!-- text header -->
+                  <div class="block text-center text-white mt-12 -z-10" data-aos="zoom-in">
+                    <h1 class="font-ArchivoBlack text-6xl font-bold  max-w-[430px] mx-auto leading-20">Find Yourself
+                        Outside.</h1>
+                    <p class="text-xl  pt-6 mb-7 px-6 max-w-[430px] lg:max-w-[630px] mx-auto">Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.</p>
+                    <a href="#" class="flex items-center justify-center mx-auto mt-4 bg-orange-350 rounded-full w-[180px] h-[48px] hover:bg-orange-450 text-lg transition duration-200">
+                            Discover
+                    </a>
+                </div>
+            </div>
+        </header>
+      <!-- main web site -->
+        <main>
+            <!-- service -->
+            <div class="container">
+                <section class="child:flex child:flex-col child:items-center child:justify-center mb-24  child:h-72 child:bg-gray-200 child:dark:bg-zinc-700 child:rounded-3xl child:text-center child:px-10  -mt-28 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3 lg:grid-cols-4">
+                     <div class="" data-aos="fade-up">
+                        <img class="mx-auto mb-4 block" src="img/svgs/fire.svg" alt="fire">
+                        <h2 class="font-ArchivoBlack dark:text-white/90 text-lg mb-3">Camping & Day Use</h2>
+                        <p class="text-gray-700 dark:text-white/70">Return to your favorite spot or discover a new one that’s right for you.</p>
+                     </div>
+                     <div class="" data-aos="fade-up">
+                        <img class="mx-auto mb-4 block" src="img/svgs/tickets.svg" alt="tickets">
+                        <h2 class="font-ArchivoBlack dark:text-white/90 text-lg mb-3">Tours & Tickets</h2>
+                        <p class="text-gray-700 dark:text-white/70">Reserve tours and tickets to participate in events.</p>
+                     </div>
+                     <div class="" data-aos="fade-up">
+                        <img class="mx-auto mb-4 block" src="img/svgs/paper.svg" alt="paper">
+                        <h2 class="font-ArchivoBlack dark:text-white/90 text-lg mb-3">Permits</h2>
+                        <p class="text-gray-700 dark:text-white/70">Obtain permits for access to high-demand locations.</p>
+                     </div>
+                     <div class="" data-aos="fade-up">
+                        <img class="mx-auto mb-4 block" src="img/svgs/fish.svg" alt="fish">
+                        <h2 class="font-ArchivoBlack dark:text-white/90 text-lg mb-3">Recreation Activities</h2>
+                        <p class="text-gray-700 dark:text-white/70">Find the best spots for hunting, fishing & recreational shooting.</p>
+                     </div>
+                </section>
+
+
+
+                <!-- destination -->
+                <section class="main__img text-center mb-28 dark:before:bg-none dark:after:bg-none ">
+                    <div  data-aos="zoom-in">
+                        <img class="block mx-auto" src="img/svgs/destination.svg" alt="destination">
+                        <h2 class="font-ArchivoBlack text-black dark:text-white/80 text-3xl mt-7 mb-11">Explore Destinations <br> & Activities</h2>
+                    </div>
+                        <!-- places -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4 mb-8">
+                        <!-- place -->
+                        <div class="w-[450px] mx-auto md:w-auto md:mx-0 bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 h-[500px] md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image1.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700  text-red-950 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg  xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-[170px] md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">The Stuga</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="w-[450px] h-[500px]  mx-auto md:w-auto md:mx-0 bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image2.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-[170px] md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3 line-clamp-1">Tiny Cabin in the mountains</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="w-[450px] h-[500px] mx-auto md:w-auto md:mx-0 bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image3.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                   
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                    <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                  </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-[170px] md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Dragonfly Tiny Cabin</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="w-[450px] h-[500px] mx-auto md:w-auto md:mx-0 bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image4.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-[170px] md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Trickle Creek Ranch</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image5.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">The Hermitage Cabin</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image6.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Kindred Spirits Cabin</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image7.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">The Summit Cabin</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block  bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image8.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Luxury Tiny Beach Cabin</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block  bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image9.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Ninovan on the Shore</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden xl:block  bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image10.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px]  right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3 line-clamp-1">Barrier island elevated tent</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden xl:block  bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image11.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">The Tree House</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                        <div class="hidden xl:block  bg-gray-200 dark:bg-zinc-700 rounded-3xl mb-7 p-7 md:h-[440px]" data-aos="fade-up">
+                            <!-- place banner -->
+                            <div class="relative ">
+                                <img class="mx-auto rounded-3xl w-full h-64 md:h-full object-cover" src="img/image12.jpg" alt="img">
+                                <!-- place like -->
+                                <div class="place_like absolute top-6 right-6 bg-gray-200 dark:bg-zinc-700 flex items-center justify-center w-11 h-11 rounded-2xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.037" height="24.037" viewBox="0 0 24.037 24.037" fill="transparent" stroke="#e76f51" >
+                                        <path id="Path_955" data-name="Path 955" d="M15.822,8.979v.029H4V-2.1A5.915,5.915,0,0,1,9.912-7.841a5.913,5.913,0,0,1,5.849,5.049,5.912,5.912,0,0,1,.061,11.772Z" transform="translate(2.716 20.496) rotate(-45)"/>
+                                      </svg>
+                                </div>
+                                <!-- place Price -->
+                                <div class="absolute bottom-36 md:bottom-[170px] right-0 left-0 mx-auto w-40 py-3 rounded-xl text-orange-350 bg-gray-200 dark:bg-zinc-700 ">
+                                    <p class="font-RobotoMedium">$36/night</p>
+                                </div>
+                                 <!-- place title -->
+                                <h3 class="text-gray-700 dark:text-white/70 font-ArchivoBlack text-lg mt-9 mb-3">Red Lifeguard Stand</h3>
+                                <!-- place caption -->
+                                <p class="text-gray-700 dark:text-white/70 mb-9">Book unique camping experiences on over 300,000 campsites.</p>
+                                <!-- place link -->
+                                <a href="#" class="dark:bg-zinc-500 hover:dark:bg-zinc-600 hover:bg-gray-400 bg-gray-300 text-gray-700 dark:text-zinc-400 font-RobotoMedium text-lg py-3 px-10 rounded-full  transition-all">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-center border border-orange-350 text-orange-350  py-3 px-10 rounded-full font-RobotoMedium text-lg hover:bg-gray-200 hover:border-gray-200 hover:dark:border-zinc-500 hover:dark:bg-zinc-700 transition duration-200 ">View all</a>
+                </section>
+
+                <!-- form web site -->
+            <section class="relative  flex flex-col-reverse md:items-center md:justify-between md:flex-row bg-orange-150 dark:bg-zinc-600 rounded-3xl px-7  py-12 text-center md:text-left mb-36 overflow-hidden before:bg-shape-3 before:absolute before:top-14 before:right-0 before:bottom-0 before:-left-64 before:bg-no-repeat before:bg-contain before:w-[700px] before:h-[700px] md:before:w-auto md:before:h-auto md:before:top-0 md:before:-left-[400px] lg:before:-left-80 xl:before:-left-64 md:before:bg-auto md:before:bg-left dark:before:bg-none shadow-sm" data-aos="fade-up">
+                <div class="md:w-[480px] md:ml-16 z-10">
+                    <h2 class="font-ArchivoBlack text-black dark:text-white/80 text-3xl max-w-[160px] md:max-w-[360px]  mx-auto md:mx-0 my-7">Let's Stay in Touch</h2>
+                    <p class="text-gray-700 dark:text-white/70 font-RobotoMedium max-w-[310px] mx-auto md:mx-0" >Get travel planning ideas, helpful tips, and stories from our visitors delivered right to your inbox.</p>
+
+                    <div class="flex  items-center justify-center relative  h-20 mt-6 "  data-aos="fade-up-right"> 
+                    <form action="" class="h-full w-full">
+                        <svg class="absolute top-[30px] left-7" xmlns="http://www.w3.org/2000/svg" width="24.242" height="17.746" viewBox="0 0 24.242 17.746">
+                            <path id="Path_908" data-name="Path 908" d="M26.215,17.058H8.027A3.03,3.03,0,0,0,5,20.085V31.777A3.031,3.031,0,0,0,8.027,34.8H26.215a3.031,3.031,0,0,0,3.027-3.027V20.085A3.03,3.03,0,0,0,26.215,17.058Zm-18.188.857H26.215a2.168,2.168,0,0,1,1.829,1.007l-9.328,8.81a2.354,2.354,0,0,1-3.189,0L6.2,18.923A2.169,2.169,0,0,1,8.027,17.915ZM5.878,32.062a2.207,2.207,0,0,1-.021-.285V20.085a2.163,2.163,0,0,1,.021-.285l6.491,6.131Zm20.337,1.885H8.027A2.168,2.168,0,0,1,6.2,32.94l6.8-6.419,1.944,1.835a3.22,3.22,0,0,0,4.366,0l1.943-1.835,6.8,6.418A2.167,2.167,0,0,1,26.215,33.947Zm2.169-13.862V31.777a2.2,2.2,0,0,1-.021.285l-6.491-6.131L28.364,19.8A2.251,2.251,0,0,1,28.384,20.085Z" transform="translate(-5 -17.058)" fill="#8d8d8d"/>
+                          </svg>
+                          
+                                
+                              <input class=" z-10 outline-none border-none h-full w-full pl-[60px]  rounded-3xl bg-gray-100 dark:bg-zinc-700" type="text" placeholder="Email Address">
+                              <button class="absolute top-[15px] right-5 outline-none border-none bg-orange-350 w-12 h-12 rounded-2xl shadow-xxl" type="submit">
+
+                                <svg class="flex items-center justify-center mx-auto" xmlns="http://www.w3.org/2000/svg" width="24.162" height="18.23" viewBox="0 0 24.162 18.23">
+                                    <path id="Path_909" data-name="Path 909" d="M9.778,15.82,6.954,17.7a.55.55,0,0,1-.816-.439V13.121l11.546-8.66L3.88,11.8.3,9.356A.748.748,0,0,1,.491,8.039L23.709-.37c.314-.126.565.251.377.565L13.606,17.514a.773.773,0,0,1-1.067.188Z" transform="translate(0.012 0.395)" fill="#fff" fill-rule="evenodd"/>
+                                  </svg>
+                                  
+                              </button> 
+                      </form>
+                </div>
+                </div>
+                <div class="xl:mx-14 md:ml-4 z-10" data-aos="zoom-in">
+                    <img class="w-full" src="img/tent.png" alt="img form">
+                </div>
+            </section>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer class="relative bg-pink-350 dark:bg-zinc-700 rounded-t-9xl text-gray-700 dark:text-white/70 pt-28 pb-11 " data-aos="fade-up">
+            <div class="container relative">
+                <!-- footer scroll -->
+                <a href="#scroll" class="flex absolute -top-36 right-0 left-0 mx-auto xl:left-auto xl:mx-0 xl:right-0 rounded-3xl items-center justify-center w-16 h-16 bg-gray-200 dark:bg-zinc-600 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.68" height="22.175" viewBox="0 0 18.68 22.175">
+                        <path id="Path_958" data-name="Path 958" d="M22.175,9.358a1.43,1.43,0,0,0-1.43-1.43H5.063l5.813-5.42A1.43,1.43,0,1,0,8.923.421L.455,8.311a1.43,1.43,0,0,0,0,2.091L8.923,18.3A1.43,1.43,0,1,0,10.875,16.2L5.063,10.788H20.746A1.43,1.43,0,0,0,22.175,9.358Z" transform="translate(18.68) rotate(90)" fill="#e76f51"/>
+                      </svg>
+                      
+                </a>
+                <!-- footer container -->
+                <div class="lg:flex  lg:justify-between ">
+                    <!-- footer left -->
+                    <div class="max-w-[520px]" data-aos="zoom-in-up">
+                        <!-- Description -->
+                        <div class="">
+                        <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Hipcamp is everywhere you want to camp.</h2>
+                        <p class="mb-8">Discover unique experiences on ranches, nature preserves, farms, vineyards, and public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive backcountry sites, car camping, airstreams, tiny houses, RV camping, glamping tents and more.</p>
+                        </div>
+                        <!-- app link PC -->
+                        <div class="hidden lg:block"  data-aos="zoom-in-up">
+                            <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Download Our App</h2>
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="img/app-store-apple.jpg" alt="app store">
+                                </a>
+                                <a class="pl-3"  href="#">
+                                    <img src="img/google-play.jpg" alt="google play">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer right -->
+                    <div class="flex flex-wrap lg:flex-nowrap">
+                        <!-- footer item -->
+                        <div class="w-48 ml-4 lg:ml-2 mt-10 md:mt-0" data-aos="zoom-in-up">
+                          <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Get to Know Us</h2>
+                          <ul class="child-hover:text-orange-350 child:transition-all child:duration-300 child:ease-in-out  child:pb-1 child-hover:underline child-hover:decoration-1">
+                              <li>
+                                  <a class="" href="#">About Us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Rules & Reservation Policies</a>
+                              </li>
+                              <li>
+                                  <a href="#">Accessibility</a>
+                              </li>
+                              <li>
+                                  <a href="#">Media Center</a>
+                              </li>
+                              <li>
+                                  <a href="#">Site Map</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="w-48 ml-4 lg:ml-2 mt-10 md:mt-0" data-aos="zoom-in-up">
+                        <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Plan with Us</h2>
+                        <ul class="child-hover:text-orange-350 child:transition-all child:duration-300 child:ease-in-out  child:pb-1 child-hover:underline child-hover:decoration-1">
+                            <li>
+                                <a  href="#">Find Trip Inspiration</a>
+                            </li>
+                            <li>
+                                <a href="#">Build a Trip</a>
+                            </li>
+                            <li>
+                                <a href="#">Buy a Pass</a>
+                            </li>
+                            <li>
+                                <a href="#">Enter a Lottery</a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="w-48 ml-4 lg:ml-2 mt-10 md:mt-0 " data-aos="zoom-in-up">
+                        <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Let Us Help You</h2>
+                        <ul class="child-hover:text-orange-350 child:transition-all child:duration-300 child:ease-in-out  child:pb-1 child-hover:underline child-hover:decoration-1">
+                            <li>
+                                <a class="" href="#">Your Account</a>
+                            </li>
+                            <li>
+                                <a href="#">Your Reservations</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#">Submit Feedback</a>
+                            </li>
+                        </ul>
+                    </div>    
+                    </div>
+                          <!-- app link MOBILE -->
+                          <div class="lg:hidden mt-10"  data-aos="zoom-in-up">
+                            <h2 class="font-ArchivoBlack text-lg text-black dark:text-white/80 mb-4">Download Our App</h2>
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="img/app-store-apple.jpg" alt="app store">
+                                </a>
+                                <a class="pl-3"  href="#">
+                                    <img src="img/google-play.jpg" alt="google play">
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <!-- footer copy right -->
+                <p class="flex items-center justify-center mt-8 lg:mt-5 text-sm" >© 2020. All rights reserved.</p>
+            </div>
+        </footer>
+        
+
+        <!-- app js -->
+    <script src="js/app.js"></script>
+    <!-- link js aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>

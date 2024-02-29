@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.port": 5502,
+    "minify.minifyExistingOnSave": true,
+    "editor.guides.bracketPairs": true
+}
