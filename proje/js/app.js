@@ -20,16 +20,7 @@ toggleThemeBtn.addEventListener("click", () => {
   }
 });
 
-const toggleeThemeBtn = $.querySelector("#toggle-theme-1");
-toggleeThemeBtn.addEventListener("click", () => {
-  if (localStorage.theme === "dark") {
-    $.documentElement.classList.remove("dark");
-    localStorage.theme = "light";
-  } else {
-    $.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
-});
+
 
 likePost.forEach((item) => {
     item.addEventListener('click' , () => {
