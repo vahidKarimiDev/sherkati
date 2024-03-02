@@ -6,5 +6,5 @@
 1- Sherkat 
     - html
     - css
+    - tailwind css
     - js
-    
