@@ -3,7 +3,7 @@
 [demo](#project--sherkati)
 
 
-1- Sherkat 
+- Sherkat 
     - html
     - css
     - tailwind css
